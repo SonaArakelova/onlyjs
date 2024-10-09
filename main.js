@@ -1,8 +1,5 @@
 
-
-//  initialize the page
 function initializePage() {
-  // container
   const container = document.createElement("div");
   container.style.width = "100%";
   container.style.height = "100vh"; 
@@ -23,8 +20,6 @@ function initializePage() {
   container.appendChild(footer);
 }
 
-
-//  header
 function createHeader() {
   const header = document.createElement("header");
   header.style.height = '40px';
@@ -44,13 +39,12 @@ function createHeader() {
   return header;
 }
 
-//  login
 function loginfunc(event) {
   event.preventDefault(); 
   loadPage2();
 }
 
-// navBar
+
 function createNavBar() {
   const navBar = document.createElement("nav");
   navBar.style.position = 'absolute';
@@ -63,7 +57,7 @@ function createNavBar() {
   return navBar;
 }
 
-// contentarea
+
 function createContentArea(contentText) {
   const contentArea = document.createElement("section");
   contentArea.style.width = "80%"; 
@@ -74,7 +68,6 @@ function createContentArea(contentText) {
   return contentArea;
 }
 
-// footer
 function createFooter() {
   const footer = document.createElement("footer");
   footer.style.width = "80%"; 
@@ -91,14 +84,12 @@ function createFooter() {
 function loadPage2() {
   document.body.innerHTML = '';
 
-  // container for page 2
   const container = document.createElement("div");
   container.style.width = "100%";
   container.style.height = "100vh"; 
   container.style.position = 'relative';
  
 
-  // header for page 2
   const header = document.createElement("header");
   header.style.height = '40px';
   header.style.border = "3px solid black";
@@ -122,7 +113,6 @@ function loadPage2() {
   loginForm.style.paddingRight = '30px';
 
 
-  // user name
   const userNameInput = document.createElement("input");
   userNameInput.type = "text";
   userNameInput.placeholder = "User name";
@@ -132,7 +122,6 @@ function loadPage2() {
   userNameInput.style.fontSize = '15px';
   loginForm.appendChild(userNameInput);
 
-  // password input
   const passwordInput = document.createElement("input");
   passwordInput.type = "password";
   passwordInput.placeholder = "Password";
@@ -142,7 +131,6 @@ function loadPage2() {
   passwordInput.style.fontSize = '15px';
   loginForm.appendChild(passwordInput);
 
-  //  log-in button
   const loginButton = document.createElement("button");
   loginButton.type = "submit";
   loginButton.textContent = "Log In";
@@ -153,7 +141,6 @@ function loadPage2() {
   loginButton.style.boxShadow = "4px 4px 1px black";
   loginForm.appendChild(loginButton);
 
-  // Append 
   container.appendChild(loginForm);
 
 
@@ -170,8 +157,6 @@ function loadPage2() {
       initializePage();
   });
 
-
-  // Append 
   document.body.appendChild(container);
   container.appendChild(header);
 }
